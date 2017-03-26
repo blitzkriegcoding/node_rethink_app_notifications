@@ -16,5 +16,8 @@
     "nodemon": "^1.11.0",
     "rethinkdb": "^2.3.3",
     "socket.io": "^1.7.3"
+  },
+  "devDependencies": {
+    "bower": "^1.8.0"
   }
 }
