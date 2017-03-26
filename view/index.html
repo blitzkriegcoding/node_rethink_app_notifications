@@ -5,10 +5,11 @@
     <title>Polling app using Node and RethinkDB</title>
     <link href="./bower_components/angular-material/angular-material.css" rel="stylesheet" />
   </head>
-  <body ng-app='starterApp' layout='column' ng-controller='pollingController'>
+  <body ng-app='notificationApp' layout='column' ng-controller='pollingController'>
     <script src="./bower_components/angular/angular.js" type="text/javascript" ></script>
-    <script src="/socket.io/socket.io.js" type="text/javascript"></script>
-    <script src="./bower_components/angular-route/angular-route.js" type="text/javascript" ></script>
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js" type="text/javascript" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js" type="text/javascript"></script>
+    <!-- <script src="./bower_components/angular-route/angular-route.js" type="text/javascript" ></script> -->
     <script src="./bower_components/angular-messages/angular-messages.js" type="text/javascript" ></script>
     <script src="./bower_components/angular-animate/angular-animate.js" type="text/javascript" ></script>
     <script src="./bower_components/angular-aria/angular-aria.js" type="text/javascript" ></script>
@@ -17,17 +18,16 @@
     <md-toolbar layout="row" flex="1">
       <md-menu-bar>
         <md-menu>
-          <md-button ng-href="/#/">Home</md-button>
+          <md-button ui-sref="home">Home</md-button>
         </md-menu>
         <md-menu>
-          <md-button ng-href="/#/create">Create poll</md-button>
+          <md-button ui-sref="create">Create poll</md-button>
         </md-menu>
         <md-menu>
-          <md-button ng-href="/#/view">View Poll</md-button>
+          <md-button ui-sref="view">View Poll</md-button>
         </md-menu>
       </md-menu-bar>
     </md-toolbar>
-  <div flex layout="column" layout-align="left" ng-view>
-  </div>
+  <div flex layout="column" layout-align="left" ui-view></div>
 </body>
 </html>
