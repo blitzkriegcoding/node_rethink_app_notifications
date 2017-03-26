@@ -4,7 +4,8 @@
   "description": "An app real-time nodejs + rethinkdb notification",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "author": "Yrvin Escorihuela",
   "license": "MIT",
@@ -12,6 +13,7 @@
     "async": "^2.2.0",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
+    "nodemon": "^1.11.0",
     "rethinkdb": "^2.3.3",
     "socket.io": "^1.7.3"
   }
