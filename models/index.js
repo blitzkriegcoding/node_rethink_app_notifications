@@ -20,7 +20,6 @@ class database {
                         if(err)
                         {
                             console.log(`Database already created`);
-                            console.log(`${err}`);
                         }
                         else
                         {
@@ -35,7 +34,7 @@ class database {
                         if(err) 
                         {
                             console.log("Table already created"); 
-                            console.log(`${err}`);   
+                            
                         }
                         else
                         {
@@ -45,9 +44,9 @@ class database {
                         callback(null, "Database is setup successfully");
                     })
                 }
-            ]), (err, data) => {
-                //console.log(data);
-            }
+            ], (err, data) => {
+                console.log(data);
+            })
         }
     connectToRtDBServer(callback)
     {
@@ -59,7 +58,7 @@ class database {
 
         });
     }
-
+    
     connectToDb(callback)
     {
         rtdb.connect({
